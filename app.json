@@ -1,15 +1,28 @@
 {
-  "name": "Feedback classifier",
-  "description": "For classifying Japanese feedback via Watson API",
+  "name": "Watson classifier client",
+  "description": "Client for sending phrases to IBM Watson API to classify",
   "keywords": [
-    "AI"
+    "Watson"
   ],
   "addons": [
     "heroku-postgresql:hobby-dev"
   ],
-  "repository": "",
-  "license": "ISC",
-  "logo": "http://i.imgur.com/5a14VpH.png",
+  "env": {
+    "CLASSIFIER_ID": {
+      "description": "The ID for your trained Watson classifier.",
+      "required": true
+    },
+    "CLASSIFIER_USER": {
+      "description": "The user for your IBM Bluemix API.",
+      "required": true
+    },
+    "CLASSIFIER_PASS": {
+      "description": "The password for your IBM Bluemix API.",
+      "required": true
+    }
+  },
+  "repository": "https://github.com/fritz-c/watson-classifier-client",
+  "license": "MIT",
   "success_url": "/",
   "scripts": {
     "postdeploy": "node init-database.js"
