@@ -12,6 +12,6 @@
   "logo": "http://i.imgur.com/5a14VpH.png",
   "success_url": "/",
   "scripts": {
-    "postdeploy": "node init-database.js && cd client && npm run build"
+    "postdeploy": "node init-database.js"
   }
 }
