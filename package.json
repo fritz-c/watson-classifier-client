@@ -21,7 +21,8 @@
     "eslint-plugin-react": "^7.1.0"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
+    "start-dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server.js",
     "client": "node start-client.js",
     "lint": "eslint ."
