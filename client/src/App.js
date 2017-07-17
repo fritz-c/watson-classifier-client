@@ -56,7 +56,7 @@ class App extends Component {
           }
         })
         .catch(err => {
-          console.log('ctodo((((err))))', err); // eslint-disable-line no-console
+          console.error(err); // eslint-disable-line no-console
           this.setState({ loading: false });
         });
     };

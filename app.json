@@ -1,0 +1,17 @@
+{
+  "name": "Feedback classifier",
+  "description": "For classifying Japanese feedback via Watson API",
+  "keywords": [
+    "AI"
+  ],
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "repository": "",
+  "license": "ISC",
+  "logo": "http://i.imgur.com/5a14VpH.png",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "node init-database.js && cd client && npm run build"
+  }
+}
